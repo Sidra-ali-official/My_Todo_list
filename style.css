@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #cebea4;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 350px;
+    background: #0d0d0d;
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .add-task-box {
+    position: relative;
+}
+
+.container .add-task-box input {
+    all: unset;
+    height: 45px;
+    width: calc(100% - 65px);
+    background: #1e1e1e;
+    padding-left: 20px;
+    border-radius: 10px;
+    color: #fff;
+    transition: all .2s;
+    border: none;
+}
+
+.container .add-task-box .add-btn {
+    all: unset;
+    height: 45px;
+    width: 45px;
+    background: #ff5631;
+    color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+}
+
+.container .all-tasks {
+    max-height: 300px;
+    margin-top: 20px;
+    overflow-y: auto;
+    padding-right: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #ff5631 #1e1e1e;
+}
+
+.container .all-tasks .task {
+    height: 50px;
+    width: 100%;
+    background: #1e1e1e;
+    border: .6px solid #e6d4b6;
+    border-radius: 7px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.container .all-tasks .task input {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #ff5631;
+    border-radius: 100%;
+    margin-left: 13px;
+    cursor: pointer;
+}
+
+.container .all-tasks .task input:checked {
+    background: #57cb4c;
+    border-color: #57cb4c;
+}
+
+.container .all-tasks .task .user-task {
+    margin-left: 8px;
+    color: #e6d4b6;
+    font-weight: 600;
+    font-size: 13px;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.container .all-tasks .task .user-task.checked {
+    text-decoration: line-through;
+}
+
+.container .all-tasks .task .btns {
+    display: flex;
+    align-items: center;
+}
+
+.container .all-tasks .task .btns .dlt-btn {
+    all: unset;
+    height: 33px;
+    width: 33px;
+    background: #ff5631;
+    color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 200;
+    border-radius: 7px;
+}
+
+.container .others {
+    border: 1px solid gray;
+    margin-top: 23px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.container .others .no-of-tasks {
+    font-size: 14px;
+    color: darkgray;
+}
+
+.container .others .clear-all-btn {
+    all: unset;
+    height: 30px;
+    width: 80px;
+    background: #ff5631;
+    color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.container .all-tasks .clipboard-icon {
+    font-size: 85px;
+    color: grey;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.container .all-tasks .no-task-message {
+    color: grey;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: -13px;
+}
+
+@media screen and (max-width: 400px) {
+    .container .add-task-box input {
+        width: 180px;
+    }
+}
